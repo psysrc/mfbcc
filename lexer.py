@@ -125,25 +125,3 @@ class Lexer:
 
         tokens.append((TokenType.EOF, ""))
         return tokens
-
-
-if __name__ == "__main__":
-    source_code = """
-    int main() {
-        int a = 10;
-        float b = 3.14;
-        char c = 'A';
-        if (a > b) {
-            printf("a is greater than b\\n");
-        } else {
-            printf("a is not greater than b\\n");
-        }
-
-        return 0;
-    }
-    """
-    lexer = Lexer(source_code)
-    tokens = lexer.tokenize()
-
-    for token in tokens:
-        print(token)
